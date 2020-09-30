@@ -1,0 +1,1183 @@
+{% include 'main/html/assets.html' %}
+{% load static %}
+<div id="details">
+    <button class="tablink" onclick="openPage('physicalServers', this, 'red')">Physical Servers</button>
+    <button class="tablink" onclick="openPage('vmServers', this, 'green')" id="defaultOpen">VM Servers</button>
+    <button class="tablink" onclick="openPage('vmHardware', this, 'blue')">VM Hardware</button>
+    <button class="tablink" onclick="openPage('backupAndSan', this, 'orange')">Backup And San</button>
+
+    <div id="physicalServers" class="tabcontent">
+        <div class="col-md-12" id="psa">
+            <button type="button" class="btn btn-primary addButton">Add <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+        <div class="col-md-12 scrollit">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Edit</th>
+                    <th>Location</th>
+                    <th>Rack Name</th>
+                    <th>Server Name</th>
+                    <th>OS</th>
+                    <th>IP Address</th>
+                    <th>Idrac IP</th>
+                    <th>Domain</th>
+                    <th>CPU</th>
+                    <th>Core Per CPU</th>
+                    <th>Hyperthreading</th>
+                    <th>Memory</th>
+                    <th>Memory Type</th>
+                    <th>Storage</th>
+                    <th>Provision Date</th>
+                    <th>Server Type</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Project Name</th>
+                    <th>BU Code</th>
+                    <th>DEPT Name</th>
+                    <th>Server Role</th>
+                    <th>Serial Number</th>
+                    <th>Project Manager</th>
+                    <th>Support Member name</th>
+                    <th>AMC</th>
+                    <th>Asset Number</th>
+                    <th>Backup</th>
+                    <th>Monitoring</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="ps">
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                    <td id="locationPs">John</td>
+                    <td id="rackNamePs">Doe</td>
+                    <td id="serverNamePs">john@example.com</td>
+                    <td id="osPs">john@example.com</td>
+                    <td id="ipAddresPs">john@example.com</td>
+                    <td id="idracIPPs">john@example.com</td>
+                    <td id="domainPs">john@example.com</td>
+                    <td id="cpuPs">john@example.com</td>
+                    <td id="corePerCPUPs">john@example.com</td>
+                    <td id="hyperThreadingPs">john@example.com</td>
+                    <td id="memoryPs">john@example.com</td>
+                    <td id="memoryTypePs">john@example.com</td>
+                    <td id="storagePs">john@example.com</td>
+                    <td id="provisionDatePs">john@example.com</td>
+                    <td id="serverTypePs">john@example.com</td>
+                    <td id="makePs">john@example.com</td>
+                    <td id="modelPs">john@example.com</td>
+                    <td id="projectNamePs">john@example.com</td>
+                    <td id="buCodePs">john@example.com</td>
+                    <td id="deptNamePs">john@example.com</td>
+                    <td id="serverRolePs">john@example.com</td>
+                    <td id="serialNumberPs">john@example.com</td>
+                    <td id="projectManagerPs">john@example.com</td>
+                    <td id="supportMemberNamePs">john@example.com</td>
+                    <td id="amcPs">john@example.com</td>
+                    <td id="assetNumberPs">john@example.com</td>
+                    <td id="backupPs">john@example.com</td>
+                    <td id="monitoringPs">john@example.com</td>
+                    <td id="statusPs">john@example.com</td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                    <td id="locationPs">John</td>
+                    <td id="rackNamePs">Doe</td>
+                    <td id="serverNamePs">john@example.com</td>
+                    <td id="osPs">john@example.com</td>
+                    <td id="ipAddresPs">john@example.com</td>
+                    <td id="idracIPPs">john@example.com</td>
+                    <td id="domainPs">john@example.com</td>
+                    <td id="cpuPs">john@example.com</td>
+                    <td id="corePerCPUPs">john@example.com</td>
+                    <td id="hyperThreadingPs">john@example.com</td>
+                    <td id="memoryPs">john@example.com</td>
+                    <td id="memoryTypePs">john@example.com</td>
+                    <td id="storagePs">john@example.com</td>
+                    <td id="provisionDatePs">john@example.com</td>
+                    <td id="serverTypePs">john@example.com</td>
+                    <td id="makePs">john@example.com</td>
+                    <td id="modelPs">john@example.com</td>
+                    <td id="projectNamePs">john@example.com</td>
+                    <td id="buCodePs">john@example.com</td>
+                    <td id="deptNamePs">john@example.com</td>
+                    <td id="serverRolePs">john@example.com</td>
+                    <td id="serialNumberPs">john@example.com</td>
+                    <td id="projectManagerPs">john@example.com</td>
+                    <td id="supportMemberNamePs">john@example.com</td>
+                    <td id="amcPs">john@example.com</td>
+                    <td id="assetNumberPs">john@example.com</td>
+                    <td id="backupPs">john@example.com</td>
+                    <td id="monitoringPs">john@example.com</td>
+                    <td id="statusPs">john@example.com</td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                    <td id="locationPs">John</td>
+                    <td id="rackNamePs">Doe</td>
+                    <td id="serverNamePs">john@example.com</td>
+                    <td id="osPs">john@example.com</td>
+                    <td id="ipAddresPs">john@example.com</td>
+                    <td id="idracIPPs">john@example.com</td>
+                    <td id="domainPs">john@example.com</td>
+                    <td id="cpuPs">john@example.com</td>
+                    <td id="corePerCPUPs">john@example.com</td>
+                    <td id="hyperThreadingPs">john@example.com</td>
+                    <td id="memoryPs">john@example.com</td>
+                    <td id="memoryTypePs">john@example.com</td>
+                    <td id="storagePs">john@example.com</td>
+                    <td id="provisionDatePs">john@example.com</td>
+                    <td id="serverTypePs">john@example.com</td>
+                    <td id="makePs">john@example.com</td>
+                    <td id="modelPs">john@example.com</td>
+                    <td id="projectNamePs">john@example.com</td>
+                    <td id="buCodePs">john@example.com</td>
+                    <td id="deptNamePs">john@example.com</td>
+                    <td id="serverRolePs">john@example.com</td>
+                    <td id="serialNumberPs">john@example.com</td>
+                    <td id="projectManagerPs">john@example.com</td>
+                    <td id="supportMemberNamePs">john@example.com</td>
+                    <td id="amcPs">john@example.com</td>
+                    <td id="assetNumberPs">john@example.com</td>
+                    <td id="backupPs">john@example.com</td>
+                    <td id="monitoringPs">john@example.com</td>
+                    <td id="statusPs">john@example.com</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="vmServers" class="tabcontent">
+        <div class="col-md-12" id="vsa">
+            <button type="button" class="btn btn-primary addButton">Add <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+        <div class="scrollit col-md-12">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Edit</th>
+                    <th>Location</th>
+                    <th>Server OS</th>
+                    <th>Server Name</th>
+                    <th>Domain</th>
+                    <th>IP Address</th>
+                    <th>Server Role</th>
+                    <th>Server Type</th>
+                    <th>Server Class</th>
+                    <th>OS Class</th>
+                    <th>CPU</th>
+                    <th>Memory</th>
+                    <th>Storage</th>
+                    <th>Provision Date</th>
+                    <th>BU Code</th>
+                    <th>Dept Name</th>
+                    <th>Project Name</th>
+                    <th>Project Manager</th>
+                    <th>Support Member name</th>
+                    <th>Backup</th>
+                    <th>Monitoring</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="vs">
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                    <td id="locationVs">John</td>
+                    <td id="serverOSvs">Doe</td>
+                    <td id="serverNameVs">john@example.com</td>
+                    <td id="domainVs">john@example.com</td>
+                    <td id="ipAddressVs">john@example.com</td>
+                    <td id="serverRoleVs">john@example.com</td>
+                    <td id="serverTypeVs">john@example.com</td>
+                    <td id="serverClassVs">john@example.com</td>
+                    <td id="osClassVs">john@example.com</td>
+                    <td id="cpuVs">john@example.com</td>
+                    <td id="memoryVs">john@example.com</td>
+                    <td id="storageVs">john@example.com</td>
+                    <td id="provisionDateVs">john@example.com</td>
+                    <td id="buCodevs">john@example.com</td>
+                    <td id="deptNameVs">john@example.com</td>
+                    <td id="projectNameVs">john@example.com</td>
+                    <td id="projectManagerVs">john@example.com</td>
+                    <td id="supportMemberNameVs">john@example.com</td>
+                    <td id="backUpVs">john@example.com</td>
+                    <td id="monitoringVs">john@example.com</td>
+                    <td id="statusVs">john@example.com</td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                    <td id="locationVs">Mary</td>
+                    <td id="serverOSvs">Moe</td>
+                    <td id="serverNameVs">mary@example.com</td>
+                    <td id="domainVs">mary@example.com</td>
+                    <td id="ipAddressVs">mary@example.com</td>
+                    <td id="serverRoleVs">mary@example.com</td>
+                    <td id="serverTypeVs">mary@example.com</td>
+                    <td id="serverClassVs">mary@example.com</td>
+                    <td id="osClassVs">mary@example.com</td>
+                    <td id="cpuVs">mary@example.com</td>
+                    <td id="memoryVs">mary@example.com</td>
+                    <td id="storageVs">mary@example.com</td>
+                    <td id="provisionDateVs">mary@example.com</td>
+                    <td id="buCodevs">mary@example.com</td>
+                    <td id="deptNameVs">mary@example.com</td>
+                    <td id="projectNameVs">mary@example.com</td>
+                    <td id="projectManagerVs">mary@example.com</td>
+                    <td id="supportMemberNameVs">mary@example.com</td>
+                    <td id="backUpVs">mary@example.com</td>
+                    <td id="monitoringVs">john@example.com</td>
+                    <td id="statusVs">john@example.com</td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                    <td id="locationVs">July</td>
+                    <td id="serverOSvs">Dooley</td>
+                    <td id="serverNameVs">july@example.com</td>
+                    <td id="domainVs">july@example.com</td>
+                    <td id="ipAddressVs">july@example.com</td>
+                    <td id="serverRoleVs">july@example.com</td>
+                    <td id="serverTypeVs">july@example.com</td>
+                    <td id="serverClassVs">july@example.com</td>
+                    <td id="osClassVs">july@example.com</td>
+                    <td id="cpuVs">july@example.com</td>
+                    <td id="memoryVs">july@example.com</td>
+                    <td id="storageVs">july@example.com</td>
+                    <td id="provisionDateVs">july@example.com</td>
+                    <td id="buCodevs">july@example.com</td>
+                    <td id="deptNameVs">july@example.com</td>
+                    <td id="projectNameVs">july@example.com</td>
+                    <td id="projectManagerVs">july@example.com</td>
+                    <td id="supportMemberNameVs">july@example.com</td>
+                    <td id="backUpVs">july@example.com</td>
+                    <td id="monitoringVs">john@example.com</td>
+                    <td id="statusVs">john@example.com</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="vmHardware" class="tabcontent">
+        <div class="col-md-12" id="vha">
+            <button type="button" class="btn btn-primary addButton">Add <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+        <div class="scrollit col-md-12">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Chassis</th>
+                    <th>Service Tag</th>
+                    <th>Slot Number</th>
+                    <th>Serial Number</th>
+                    <th>HostName</th>
+                    <th>IP Address</th>
+                    <th>IDRAC IP</th>
+                    <th>Management IP</th>
+                    <th>OS</th>
+                    <th>Description</th>
+                    <th>CPU</th>
+                    <th>Core</th>
+                    <th>Hyperthrading</th>
+                    <th>Logical Processor</th>
+                    <th>RAM</th>
+                    <th>HDD</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="vh">
+                    <td id="locationVh">John</td>
+                    <td id="chassisVh">Doe</td>
+                    <td id="serviceTagVh">john@example.com</td>
+                    <td id="slotVh">john@example.com</td>
+                    <td id="serialNumberVh">john@example.com</td>
+                    <td id="hostNameVh">john@example.com</td>
+                    <td id="ipAddressVh">john@example.com</td>
+                    <td id="idracIPVh">john@example.com</td>
+                    <td id="managerVh">john@example.com</td>
+                    <td id="osVh">john@example.com</td>
+                    <td id="descriptionVh">john@example.com</td>
+                    <td id="cpuVh">john@example.com</td>
+                    <td id="coreVh">john@example.com</td>
+                    <td id="hyperThreadingVh">john@example.com</td>
+                    <td id="logicalProcessorVh">john@example.com</td>
+                    <td id="ramVh">john@example.com</td>
+                    <td id="hddVh">john@example.com</td>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i>Edit
+                        </button>
+                    </td>
+                </tr>
+                <tr class="vh">
+                    <td id="locationVh">Mary</td>
+                    <td id="chassisVh">Moe</td>
+                    <td id="serviceTagVh">mary@example.com</td>
+                    <td id="slotVh">mary@example.com</td>
+                    <td id="serialNumberVh">mary@example.com</td>
+                    <td id="hostNameVh">mary@example.com</td>
+                    <td id="ipAddressVh">mary@example.com</td>
+                    <td id="idracIPVh">mary@example.com</td>
+                    <td id="managerVh">mary@example.com</td>
+                    <td id="osVh">mary@example.com</td>
+                    <td id="descriptionVh">mary@example.com</td>
+                    <td id="cpuVh">mary@example.com</td>
+                    <td id="coreVh">mary@example.com</td>
+                    <td id="hyperThreadingVh">john@example.com</td>
+                    <td id="logicalProcessorVh">john@example.com</td>
+                    <td id="ramVh">mary@example.com</td>
+                    <td id="hddVh">mary@example.com</td>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                </tr>
+                <tr class="vh">
+                    <td id="locationVh">July</td>
+                    <td id="chassisVh">Dooley</td>
+                    <td id="serviceTagVh">july@example.com</td>
+                    <td id="slotVh">july@example.com</td>
+                    <td id="serialNumberVh">july@example.com</td>
+                    <td id="hostNameVh">july@example.com</td>
+                    <td id="ipAddressVh">july@example.com</td>
+                    <td id="idracIPVh">july@example.com</td>
+                    <td id="managerVh">july@example.com</td>
+                    <td id="osVh">july@example.com</td>
+                    <td id="descriptionVh">july@example.com</td>
+                    <td id="cpuVh">july@example.com</td>
+                    <td id="coreVh">july@example.com</td>
+                    <td id="hyperThreadingVh">john@example.com</td>
+                    <td id="logicalProcessorVh">john@example.com</td>
+                    <td id="ramVh">july@example.com</td>
+                    <td id="hddVh">july@example.com</td>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="backupAndSan" class="tabcontent">
+        <div class="col-md-12" id="bas">
+            <button type="button" class="btn btn-primary addButton">Add <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+        <div class="scrollit col-md-12">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Description</th>
+                    <th>Device Type</th>
+                    <th>Device Name</th>
+                    <th>IP Address</th>
+                    <th>Management IP Address</th>
+                    <th>Serial Number</th>
+                    <th>Disks/Drives</th>
+                    <th>Disk/Drive Capacity</th>
+                    <th>AMC</th>
+                    <th>MAC</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="bas">
+                    <td id="locationBas">John</td>
+                    <td id="descriptionBas">Doe</td>
+                    <td id="deviceTypeBas">john@example.com</td>
+                    <td id="deviceNameBas">john@example.com</td>
+                    <td id="ipAddressBas">john@example.com</td>
+                    <td id="managementIPAddressBas">john@example.com</td>
+                    <td id="serialNumberBas">john@example.com</td>
+                    <td id="disksOrDrivesBas">john@example.com</td>
+                    <td id="diskOrDriveCapacityBas">john@example.com</td>
+                    <td id="amc">john@example.com</td>
+                    <td id="mac">john@example.com</td>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i>Edit
+                        </button>
+                    </td>
+                </tr>
+                <tr class="bas">
+                    <td id="locationBas">Mary</td>
+                    <td id="descriptionBas">Moe</td>
+                    <td id="deviceTypeBas">mary@example.com</td>
+                    <td id="deviceNameBas">mary@example.com</td>
+                    <td id="ipAddressBas">mary@example.com</td>
+                    <td id="managementIPAddressBas">mary@example.com</td>
+                    <td id="serialNumberBas">mary@example.com</td>
+                    <td id="disksOrDrivesBas">mary@example.com</td>
+                    <td id="diskOrDriveCapacityBas">mary@example.com</td>
+                    <td id="amc">mary@example.com</td>
+                    <td id="mac">mary@example.com</td>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                </tr>
+                <tr class="bas">
+                    <td id="locationBas">July</td>
+                    <td id="descriptionBas">Dooley</td>
+                    <td id="deviceTypeBas">july@example.com</td>
+                    <td id="deviceNameBas">july@example.com</td>
+                    <td id="ipAddressBas">july@example.com</td>
+                    <td id="managementIPAddressBas">july@example.com</td>
+                    <td id="serialNumberBas">july@example.com</td>
+                    <td id="disksOrDrivesBas">july@example.com</td>
+                    <td id="diskOrDriveCapacityBas">july@example.com</td>
+                    <td id="amc">july@example.com</td>
+                    <td id="mac">july@example.com</td>
+                    <td>
+                        <button class="btn btn-default buttonclk">
+                            <i class="glyphicon glyphicon-pencil"></i> Edit
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="physicalServerEdit" class="tabcontent col-md-offset-3 col-md-6">
+    <div class="col-md-12 heading">
+        <h1>Update the Physical Server</h1>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Location: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editLocationPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Rack Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editRackNamePs">
+        </div>
+    </div>
+
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerNamePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>OS: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editOSPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>IP Address: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editIPAddresPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Idrac IP: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editIdracIPPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Domain: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDomainPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>CPU: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editCPUPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Core Per CPU: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editCorePerCPUPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Hyperthreading: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editHyperThreadingPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Memory: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editMemoryPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Storage: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editStoragePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Provision Date: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editProvisionDatePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server Type: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerTypePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Make: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editMakePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Model: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editModelPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Project Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editProjectNamePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>BU Code: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editBUCodePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>DEPT Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDeptNamePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server Role: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerRolePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Serial Number: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editSerialNumberPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Project Manager: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editProjectManagerPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Support Member name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editSupportMemberNamePs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>AMC: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editAMCPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Asset Number: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editAssetNumberPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Backup: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editBackupPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Monitoring: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editMonitoringPs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Status: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editStatusPs">
+        </div>
+    </div>
+    <div class="button-align">
+        <button type="button" class="btn btn-primary" onclick="saveData('Physical Server')">Submit</button>
+    </div>
+</div>
+<div id="vmServeredit" class="tabcontent col-md-offset-3 col-md-6">
+    <div class="col-md-12 heading">
+        <h1>Update the VM Server</h1>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Location: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editLocationVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server OS: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerOSvs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerNameVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Domain: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDomainVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>IP Address: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editIPAddressVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server Role: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerRoleVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server Type: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerTypeVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Server Class: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServerClassVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>OS Class: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editOSClassVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>CPU: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editCPUVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Memory: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editMemoryVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Storage: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editStorageVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Provision Date: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editProvisionDateVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>BU Code: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editBUCodevs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Dept Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDeptNameVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Project Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editProjectNameVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Project Manager: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editProjectManagerVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Support Member Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editSupportMemberNameVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Backup: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editBackUpVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Monitoring: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editMonitoringVs">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Status: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editStatusVs">
+        </div>
+    </div>
+    <div class="button-align">
+        <button type="button" class="btn btn-primary" onclick="saveData('VM Server')">Submit</button>
+    </div>
+</div>
+
+<div id="vmHardwareEdit" class="tabcontent col-md-offset-3 col-md-6">
+    <div class="col-md-12 heading">
+        <h1>Update the VM Hardware</h1>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Location:</span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editLocationVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Chassis: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editChassisVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Service Tag: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editServiceTagVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Slot Number: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editSlotNumberVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Serial Number: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control" id="editSerialNumberVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Hostname: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editHostNameVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>IP Address: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editIPAddressVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Idrac IP: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editIdracIPVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Management IP: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editManagerVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>OS: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control" id="editOsVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Description: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDescriptionVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>CPU: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editCPUVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Core: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editCoreVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Hyperthreading: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editHyperthreadingVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>Logical Processor: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editLogicalProcessorVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>RAM: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editRAMVH">
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <div class="col-md-3">
+            <span>HDD: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editHDDVH">
+        </div>
+    </div>
+    <div class="button-align">
+        <button type="button" class="btn btn-primary" onclick="saveData('VM Hardware')">Submit</button>
+    </div>
+</div>
+
+
+<div id="backupAndSanEdit" class="tabcontent col-md-offset-3 col-md-6">
+    <div class="col-md-12 heading">
+        <h1>Update the Backup And San</h1>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Location: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editLocationBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Description: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDescriptionBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Device Type: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDeviceTypeBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Device Name: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDeviceNameBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>IP Address: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editIPAddressBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Management IP Address: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editManagementIPAddressBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Serial Number: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editSerialNumberBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Disks/Drives: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDisksOrDrivesBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>Disks/Drives Capacity: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editDisksOrDrivesCapacityBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>AMC: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editAMCBas">
+        </div>
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="col-md-3">
+            <span>MAC: </span>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control editCls" id="editMACBas">
+        </div>
+    </div>
+    <div class="button-align">
+        <button type="button" class="btn btn-primary" onclick="saveData('Backup And San')">Submit</button>
+    </div>
+</div>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  padding: 35px 20px;
+  height: 100%;
+}
+.scrollit {
+    overflow:scroll;
+}
+.button-align{
+    text-align: center;
+}
+.addButton{
+    padding: 10px;
+    margin: 10px;
+    float: right;
+}
+
+.heading{
+    padding: 30px;
+    text-align: center;
+    margin-top: -36px;
+}
+
+</style>
+<script src="{% static 'dashboard/dashboard.js' %}"></script>

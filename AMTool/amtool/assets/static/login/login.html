@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>AMTools</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'js-files/jQuery.min.js' %}"></script>
+</head>
+<body>
+<div class="col-md-8">
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h2>Application<br> Login Page</h2>
+            <p>Login or register from here to access.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="main">
+        <div class="login-form">
+            <form>
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input type="text" class="form-control" id="username" placeholder="User Name">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-black" onclick="validateUser()">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src='{% static "login/login.js" %}'></script>
+<script src='{% static "main/js/assets.js" %}'></script>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 2%;
+    }
+
+    .sidenav{
+        width: 60%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+
+
+
+
+
+
+</style>
+
+</body>
+</html>
